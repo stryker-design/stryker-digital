@@ -1,0 +1,228 @@
+{% extends 'base/base.html' %} {% load crispy_forms_tags %} {% load static %} 
+{% block content %} {% include 'include/navbar.html' %}
+
+<main class="mx-auto mt-16 max-w-7xl px-4 sm:mt-24 sm:px-6 lg:mt-32">
+  <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+    <div
+      class="sm:text-center md:mx-auto md:max-w-2xl lg:col-span-6 lg:text-left"
+    >
+      <h1>
+        <span
+          class="mt-1 block text-4xl font-bold tracking-tight sm:text-5xl xl:text-6xl"
+        >
+          <span class="block text-gray-900"
+            >Build authentic connections with your audience</span
+          >
+        </span>
+      </h1>
+      <p
+        class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl"
+      >
+        Social media strategy that makes your audience want to follow & engage
+        with your brand
+      </p>
+      <div class="sm:mx-auto sm:max-w-lg sm:text-center lg:mx-0 lg:text-left">
+        <form action="#" method="POST" class="mt-3 sm:flex">
+          <div
+            class="mt-3 md:mt-8 sm:flex sm:w-full flex justify-center md:justify-start"
+          >
+            <div class="mt-4 sm:mt-0 flex gap-2 sm:justify-center">
+              <a
+                href="{% url 'contact' %}"
+                class="inline-block rounded-lg bg-black px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-gray-800 hover:ring-indigo-700"
+              >
+                Get started
+                <span class="text-white" aria-hidden="true">&rarr;</span>
+              </a>
+              <a
+                href="#contact"
+                class="inline-block rounded-lg bg-black px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-gray-800 hover:ring-indigo-700"
+              >
+                Our work
+              </a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div
+      class="relative mt-12 sm:mx-auto sm:max-w-lg lg:col-span-6 lg:mx-0 lg:mt-0 lg:flex lg:max-w-none lg:items-center"
+    >
+      <div class="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md">
+        <button
+          type="button"
+          class="relative block w-full overflow-hidden rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+        >
+          <img
+            class="w-full"
+            src="{% static 'images/website-hero.jpeg' %}"
+            alt=""
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- END HERO -->
+
+<section class="pb-20">
+  <div class="relative bg-white py-24 sm:py-32 lg:py-10">
+    <div
+      class="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8"
+    >
+      <h2 class="text-lg font-semibold text-gray-600">Deploy faster</h2>
+      <p
+        class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+      >
+        See how we bring brands to life online
+      </p>
+      <p class="mx-auto mt-5 max-w-prose text-xl text-gray-500">
+        Be a part of your customers' conversations on multiple social channels.
+      </p>
+      <div class="mt-20">
+        <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="pt-6">
+            <div class="flow-root rounded-lg bg-gray-50 px-6 pb-8">
+              <div class="-mt-6">
+                <div>
+                  <span
+                    class="inline-flex items-center justify-center rounded-xl bg-black p-3 shadow-lg"
+                  >
+                    <!-- Heroicon name: outline/cloud-arrow-up -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="#FFF"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <h3
+                  class="mt-8 text-lg font-semibold leading-8 tracking-tight text-gray-900"
+                >
+                  Win customers for life
+                </h3>
+                <p class="mt-5 text-base leading-7 text-gray-600">
+                  With the right social media content and strategy, you can
+                  become a breath of fresh air they won’t overlook.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-6">
+            <div class="flow-root rounded-lg bg-gray-50 px-6 pb-8">
+              <div class="-mt-6">
+                <div>
+                  <span
+                    class="inline-flex items-center justify-center rounded-xl bg-black p-3 shadow-lg"
+                  >
+                    <!-- Heroicon name: outline/lock-closed -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="#FFF"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <h3
+                  class="mt-8 text-lg font-semibold leading-8 tracking-tight text-gray-900"
+                >
+                  Be shared with new customers
+                </h3>
+                <p class="mt-5 text-base leading-7 text-gray-600">
+                  Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.
+                  Et magna sit morbi lobortis.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-6">
+            <div class="flow-root rounded-lg bg-gray-50 px-6 pb-8">
+              <div class="-mt-6">
+                <div>
+                  <span
+                    class="inline-flex items-center justify-center rounded-xl bg-black p-3 shadow-lg"
+                  >
+                    <!-- Heroicon name: outline/arrow-path -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="#FFF"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <h3
+                  class="mt-8 text-lg font-semibold leading-8 tracking-tight text-gray-900"
+                >
+                  Drive viral awarness
+                </h3>
+                <p class="mt-5 text-base leading-7 text-gray-600">
+                  Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.
+                  Et magna sit morbi lobortis.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END HOW IT WORKS -->
+
+<!-- CALL TO ACTION -->
+<section>
+  <div class="bg-black">
+    <div
+      class="mx-auto max-w-7xl py-12 px-4 text-center sm:px-6 lg:py-16 lg:px-8"
+    >
+      <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+        <span class="block">Ready to dive in?</span>
+        <span class="block">Start your free trial today.</span>
+      </h2>
+      <div class="mt-8 flex justify-center">
+        <div class="inline-flex rounded-md shadow">
+          <a
+            href="{% url 'contact' %}"
+            class="inline-flex items-center justify-center rounded-md border border-white px-5 py-3 text-base font-medium text-white"
+            >Get started</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END CALL TO ACTION -->
+
+
+
+{% include 'include/footer.html' %} {% endblock %}

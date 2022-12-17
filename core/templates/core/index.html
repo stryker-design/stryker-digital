@@ -1,0 +1,640 @@
+{% extends 'base/base.html' %} {% block content %} {% load crispy_forms_tags %}
+{% load static %}
+
+<html class="scroll-smooth">
+  {% include 'include/navbar.html' %}
+  <div class="bg-white pb-8 sm:pb-12 lg:pb-12">
+    <div class="overflow-hidden pt-8 sm:pt-12 lg:relative lg:py-48">
+      <div
+        class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-24 lg:px-8"
+      >
+        <div>
+          <div></div>
+          <div class="mt-20">
+            <div></div>
+            <div class="mt-6 md:mt-0">
+              <h1
+                class="text-4xl font-bold tracking-tight text-center md:text-left text-gray-900 sm:text-5xl"
+              >
+                <!-- Transform your online presence with our expert web design services           -->
+                Proven digital solutions to grow your business
+              </h1>
+              <p class="mt-6 text-xl text-gray-500 text-center md:text-left">
+                Grow your business and reach new heights with our comprehensive
+                digital marketing services.
+              </p>
+            </div>
+            <div
+              class="mt-3 md:mt-10 sm:flex sm:w-full flex justify-center md:justify-start"
+            >
+              <div class="mt-4 sm:mt-0 flex gap-2 sm:justify-center">
+                <a
+                  href="{% url 'contact' %}"
+                  class="inline-block rounded-lg bg-black px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-gray-800 hover:ring-indigo-700"
+                >
+                  Get started
+                  <span class="text-white" aria-hidden="true">&rarr;</span>
+                </a>
+                <a
+                  href="#contact"
+                  class="inline-block rounded-lg bg-black px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-gray-800 hover:ring-indigo-700"
+                >
+                  Learn more
+                  <span class="text-white" aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="mt-6">
+              <div class="inline-flex items-center divide-x divide-gray-300">
+                <div class="flex flex-shrink-0 pr-5">
+                  <!-- Heroicon name: mini/star -->
+                  <svg
+                    class="h-5 w-5 text-yellow-400"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <!-- Heroicon name: mini/star -->
+                  <svg
+                    class="h-5 w-5 text-yellow-400"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <!-- Heroicon name: mini/star -->
+                  <svg
+                    class="h-5 w-5 text-yellow-400"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <!-- Heroicon name: mini/star -->
+                  <svg
+                    class="h-5 w-5 text-yellow-400"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <!-- Heroicon name: mini/star -->
+                  <svg
+                    class="h-5 w-5 text-yellow-400"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="min-w-0 flex-1 py-1 pl-5 text-sm text-gray-500 sm:py-3"
+                >
+                  <span class="font-medium text-gray-900"
+                    >Trusted by 500+ small businesses</span
+                  >
+                  <!-- by
+                over
+                <span class="font-medium text-indigo-600">500 beta users</span> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sm:mx-auto sm:max-w-3xl sm:px-6">
+        <div
+          class="py-12 sm:relative sm:mt-12 sm:py-16 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2"
+        >
+          <div class="hidden sm:block">
+            <div
+              class="absolute inset-y-0 left-1/2 w-screen rounded-l-3xl bg-gray-50 lg:left-80 lg:right-0 lg:w-full"
+            ></div>
+            <svg
+              class="absolute top-8 right-1/2 -mr-3 lg:left-0 lg:m-0"
+              width="404"
+              height="392"
+              fill="none"
+              viewBox="0 0 404 392"
+            >
+              <defs>
+                <pattern
+                  id="837c3e70-6c3a-44e6-8854-cc48c737b659"
+                  x="0"
+                  y="0"
+                  width="20"
+                  height="20"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <rect
+                    x="0"
+                    y="0"
+                    width="4"
+                    height="4"
+                    class="text-gray-200"
+                    fill="currentColor"
+                  />
+                </pattern>
+              </defs>
+              <rect
+                width="404"
+                height="392"
+                fill="url(#837c3e70-6c3a-44e6-8854-cc48c737b659)"
+              />
+            </svg>
+          </div>
+          <div
+            class="relative -mr-40 pl-4 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-full lg:max-w-none lg:pl-12"
+          >
+            <img
+              class="w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none"
+              src="https://tailwindui.com/img/component-images/top-nav-with-multi-column-layout-screenshot.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURE SECTION -->
+  <section id="services">
+    <div class="bg-white py-24 sm:py-32 lg:py-40">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-lg font-semibold leading-8 text-gray-600">
+            SERVICES
+          </h2>
+          <p
+            class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+          >
+            Grow on autopilot
+          </p>
+          <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600">
+            No time? No worries. Web design and digital marketing done for you.
+            <!-- Your partner in digital growth -->
+          </p>
+        </div>
+
+        <div class="mt-20 max-w-lg sm:mx-auto md:max-w-none">
+          <div
+            class="grid grid-cols-1 gap-y-16 md:grid-cols-2 md:gap-x-12 md:gap-y-16"
+          >
+            <a
+              href="{% url 'website' %}"
+              class="py-2 px-2 rounded relative flex flex-col gap-6 sm:flex-row md:flex-col lg:flex-row hover:bg-gray-50 ring-black"
+            >
+              <div
+                class="flex h-12 w-12 items-center justify-center rounded-xl bg-black text-white sm:shrink-0"
+              >
+                <!-- Heroicon name: outline/globe-alt -->
+                <svg
+                  class="h-8 w-8"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"
+                  />
+                </svg>
+              </div>
+              <div class="sm:min-w-0 sm:flex-1">
+                <p class="text-lg font-semibold leading-8 text-gray-900">
+                  Website Design
+                </p>
+                <p class="mt-2 text-base leading-7 text-gray-600">
+                  Visitors judge whether or not they trust your business from
+                  the moment they land on your site. Expert web desgin services
+                  for businesses across all industries.
+
+                  <!-- <span><a href="{% url 'website' %}" class="mt-3 text-black"> Learn more &rarr; </a></span> -->
+                </p>
+
+                <p class="mt-2 text-black">Learn more &rarr;</p>
+              </div>
+            </a>
+
+            <a
+              href="{% url 'seo' %}"
+              class="relative flex flex-col gap-6 sm:flex-row md:flex-col lg:flex-row py-2 px-2 hover:bg-gray-50"
+            >
+              <div
+                class="flex h-12 w-12 items-center justify-center rounded-xl bg-black text-white sm:shrink-0"
+              >
+                <!-- Heroicon name: outline/scale -->
+                
+                <svg
+                  class="h-8 w-8"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
+                  />
+                </svg>
+              </div>
+              <div class="sm:min-w-0 sm:flex-1">
+                <p class="text-lg font-semibold leading-8 text-gray-900">
+                  Search Engine optimization
+                </p>
+                <p class="mt-2 text-base leading-7 text-gray-600">
+                  Your competitors will get seen, but you'll be unmissable with
+                  effective SEO services. Don’t just rank. Be top of search, top
+                  of mind, and on top of the competition.
+              
+                </p>
+                <p class="mt-2 text-black">Learn more &rarr;</p>
+              </div>
+            </a>
+
+            <a
+              href="{% url 'social' %}"
+              class="relative flex flex-col gap-6 sm:flex-row md:flex-col lg:flex-row py-2 px-2 hover:bg-gray-50"
+            >
+              <div
+                class="flex h-12 w-12 items-center justify-center rounded-xl bg-black text-white sm:shrink-0"
+              >
+                <!-- Heroicon name: outline/bolt -->
+                <svg
+                  class="h-8 w-8"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
+                  />
+                </svg>
+              </div>
+              <div class="sm:min-w-0 sm:flex-1">
+                <p class="text-lg font-semibold leading-8 text-gray-900">
+                  Social Media
+                </p>
+                <p class="mt-2 text-base leading-7 text-gray-600">
+                  We’ll put you wherever your audience hangs out the most and
+                  craft content that builds authentic relationships with them. Click to get started. 
+                </p>
+                <p class="mt-2 text-black">Learn more &rarr;</p>
+              </div>
+            </a>
+
+            <a
+              href="{% url 'crm' %}"
+              class="relative flex flex-col gap-6 sm:flex-row md:flex-col lg:flex-row py-2 px-2 hover:bg-gray-50"
+            >
+              <div
+                class="flex h-12 w-12 items-center justify-center rounded-xl bg-black text-white sm:shrink-0"
+              >
+                <!-- Heroicon name: outline/device-phone-mobile -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"
+                  />
+                </svg>
+              </div>
+              <div class="sm:min-w-0 sm:flex-1">
+                <p class="text-lg font-semibold leading-8 text-gray-900">
+                  Customer Relationship Management
+                </p>
+                <p class="mt-2 text-base leading-7 text-gray-600">
+                  Streamline Sales & Marketing Tasks. Deliver Amazing Service.
+                  Store and organize contact information. Close More Deals.
+                  Click to get started.
+                </p>
+                <p class="mt-2 text-black">Learn more &rarr;</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END FEATURE SECTION -->
+
+  <!-- TESTIMONIAL SECTION -->
+  <!-- <section class="bg-gray-100">
+    <div class="mx-auto max-w-7xl md:grid md:grid-cols-2 md:px-6 lg:px-8">
+      <div
+        class="py-12 px-4 sm:px-6 md:flex md:flex-col md:border-r md:py-16 md:pl-0 md:pr-10 lg:pr-16"
+      >
+        <blockquote class="mt-6 md:flex md:flex-grow md:flex-col">
+          <div class="relative text-lg font-medium text-black md:flex-grow">
+            <svg
+              class="absolute top-0 left-0 h-8 w-8 -translate-x-3 -translate-y-2 transform text-indigo-600"
+              fill="currentColor"
+              viewBox="0 0 32 32"
+              aria-hidden="true"
+            >
+              <path
+                d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"
+              />
+            </svg>
+            <p class="relative">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+              expedita voluptas culpa sapiente alias molestiae. Numquam corrupti
+              in laborum sed rerum et corporis.
+            </p>
+          </div>
+          <footer class="mt-8">
+            <div class="flex items-start">
+              <div
+                class="inline-flex flex-shrink-0 rounded-full "
+              >
+                <img
+                  class="h-12 w-12 rounded-full"
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt=""
+                />
+              </div>
+              <div class="ml-4">
+                <div class="text-base font-medium text-black">Judith Black</div>
+                <div class="text-base font-medium text-gray-700">
+                  Lead Chef, Cafe
+                </div>
+              </div>
+            </div>
+          </footer>
+        </blockquote>
+      </div>
+      <div
+        class="border-t-2 border-indigo-900 py-12 px-4 sm:px-6 md:border-t-0 md:border-l md:py-16 md:pr-0 md:pl-10 lg:pl-16"
+      >
+        <blockquote class="mt-6 md:flex md:flex-grow md:flex-col">
+          <div class="relative text-lg font-medium text-black md:flex-grow">
+            <svg
+              class="absolute top-0 left-0 h-8 w-8 -translate-x-3 -translate-y-2 transform text-indigo-600"
+              fill="currentColor"
+              viewBox="0 0 32 32"
+            >
+              <path
+                d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"
+              />
+            </svg>
+            <p class="relative">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+              expedita voluptas culpa sapiente alias molestiae. Numquam corrupti
+              in laborum sed rerum et corporis. Nemo expedita voluptas culpa
+              sapiente alias molestiae.
+            </p>
+          </div>
+          <footer class="mt-8">
+            <div class="flex items-start">
+              <div
+                class="inline-flex flex-shrink-0 rounded-full border-2 border-white"
+              >
+                <img
+                  class="h-12 w-12 rounded-full"
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt=""
+                />
+              </div>
+              <div class="ml-4">
+                <div class="text-base font-medium text-black">
+                  Joseph Rodriguez
+                </div>
+                <div class="text-base font-medium text-gray-700">
+                  CEO, Workcation
+                </div>
+              </div>
+            </div>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- END TESTIMONIAL SECTION -->
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <div class="relative bg-white">
+      <div class="absolute inset-0">
+        <div class="absolute inset-y-0 left-0 w-1/2 bg-black"></div>
+      </div>
+      <div class="relative mx-auto max-w-7xl lg:grid lg:grid-cols-5">
+        <div
+          class="bg-black py-16 px-4 sm:px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12"
+        >
+          <div class="mx-auto max-w-lg">
+            <h2
+              class="text-2xl font-bold tracking-tight text-white sm:text-3xl"
+            >
+              Get started
+            </h2>
+            <p class="mt-3 text-lg leading-6 text-white">
+              Ready to make a change? Unleash the power of digital marketing to
+              grow your business.
+            </p>
+            <dl class="mt-8 text-base text-white">
+              <div class="mt-6">
+                <dt class="sr-only">Phone number</dt>
+                <dd class="flex">
+                  <!-- Heroicon name: outline/phone -->
+                  <svg
+                    class="h-6 w-6 flex-shrink-0 text-gray-400"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+                    />
+                  </svg>
+                  <span class="ml-3">+1 (570) 412-5469</span>
+                </dd>
+              </div>
+              <div class="mt-3">
+                <dt class="sr-only">Email</dt>
+                <dd class="flex">
+                  <!-- Heroicon name: outline/envelope -->
+                  <svg
+                    class="h-6 w-6 flex-shrink-0 text-gray-400"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                    />
+                  </svg>
+                  <span class="ml-3">contact@stryker-digital.com</span>
+                </dd>
+              </div>
+            </dl>
+            <p class="mt-6 text-base text-white">
+              Have more questions?
+              <a
+                href="#faq"
+                class="font-medium text-white underline scroll-smooth"
+                >View frequently asked questions</a
+              >.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-white py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12"
+        >
+          <div class="mx-auto max-w-lg lg:max-w-none">
+            <form action="#" method="POST" class="grid grid-cols-1 gap-y-6">
+              <div class="flex flex-col gap-2">
+                <label for="full-name" class="">Full name</label>
+                <div>{{ form.first_name|as_crispy_field }}</div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="full-name" class="">Email</label>
+                <div>{{ form.phone|as_crispy_field }}</div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="full-name" class="">Phone</label>
+                <div>{{ form.email|as_crispy_field }}</div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="full-name" class="">Business</label>
+                <div>{{ form.business|as_crispy_field }}</div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="full-name" class="">Message</label>
+                <div>{{ form.message|as_crispy_field }}</div>
+              </div>
+              <div>
+                <button
+                  type="submit"
+                  class="inline-flex justify-center rounded-md border border-transparent bg-black py-3 px-6 text-base font-medium text-white shadow-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- END CONTACT SECTION -->
+
+  <!-- FAQ SECTION -->
+  <!-- 
+  <section id="faq">
+    <div class="bg-white">
+      <div class="mx-auto max-w-7xl py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+        <h2 class="text-center text-3xl font-bold tracking-tight text-gray-900">
+          Frequently asked questions
+        </h2>
+        <div class="mt-12">
+          <dl
+            class="space-y-10 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-12 md:space-y-0 lg:grid-cols-3"
+          >
+            <div>
+              <dt class="text-lg font-medium leading-6 text-gray-900">
+                What&#039;s the best thing about Switzerland?
+              </dt>
+              <dd class="mt-2 text-base text-gray-500">
+                I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Quas cupiditate
+                laboriosam fugiat.
+              </dd>
+            </div>
+
+            <div>
+              <dt class="text-lg font-medium leading-6 text-gray-900">
+                What&#039;s the best thing about Switzerland?
+              </dt>
+              <dd class="mt-2 text-base text-gray-500">
+                I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Quas cupiditate
+                laboriosam fugiat.
+              </dd>
+            </div>
+
+            <div>
+              <dt class="text-lg font-medium leading-6 text-gray-900">
+                What&#039;s the best thing about Switzerland?
+              </dt>
+              <dd class="mt-2 text-base text-gray-500">
+                I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Quas cupiditate
+                laboriosam fugiat.
+              </dd>
+            </div>
+
+     
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- END FAQ -->
+
+  {% include 'include/footer.html' %}
+</html>
+
+{% endblock %}
