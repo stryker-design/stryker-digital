@@ -96,41 +96,26 @@
           method="POST"
           class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
         >
-          <div>
-            <label
-              for="first-name"
-              class="block text-sm font-medium text-gray-700"
-              >First name</label
-            >
-            <div class="mt-1">
-             {{form.first_name|as_crispy_field}}
-            </div>
+        <div class="sm:col-span-2">
+          <label for="company" class="block text-sm font-medium text-gray-700"
+            >Full name</label
+          >
+          <div class="mt-1">
+            {{form.name|as_crispy_field}}
           </div>
-          <div>
-            <label
-              for="last-name"
-              class="block text-sm font-medium text-gray-700"
-              >Last name</label
-            >
-            <div class="mt-1">
-              {{form.last_name|as_crispy_field}}
-            </div>
-          </div>
+        </div>
+
           <div class="sm:col-span-2">
             <label for="company" class="block text-sm font-medium text-gray-700"
               >Company</label
             >
-            <div class="mt-1">
-              {{form.business|as_crispy_field}}
-            </div>
+            <div class="mt-1">{{form.business|as_crispy_field}}</div>
           </div>
           <div class="sm:col-span-2">
             <label for="email" class="block text-sm font-medium text-gray-700"
               >Email</label
             >
-            <div class="mt-1">
-              {{form.email|as_crispy_field}}
-            </div>
+            <div class="mt-1">{{form.email|as_crispy_field}}</div>
           </div>
           <div class="sm:col-span-2">
             <label
@@ -146,14 +131,12 @@
             <label for="message" class="block text-sm font-medium text-gray-700"
               >Message</label
             >
-            <div class="mt-1">
-              {{form.message|as_crispy_field}}
-            </div>
+            <div class="mt-1">{{form.message|as_crispy_field}}</div>
           </div>
           <div class="sm:col-span-2 pb-10">
             <button
               type="submit"
-              class="inline-flex w-full items-center justify-center rounded-md border border-transparent bg-black px-6 py-3 text-base font-medium text-white shadow-sm focus:outline-none "
+              class="inline-flex w-full items-center justify-center rounded-md border border-transparent bg-black px-6 py-3 text-base font-medium text-white shadow-sm focus:outline-none"
             >
               Let's talk
             </button>

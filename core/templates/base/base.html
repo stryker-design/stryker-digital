@@ -1,5 +1,4 @@
-{% load tailwind_tags %} {% load static %}
-{% load crispy_forms_tags %}
+{% load tailwind_tags %} {% load static %} {% load crispy_forms_tags %} 
 {% load tailwind_filters %}
 <!DOCTYPE html>
 <html lang="en">
@@ -11,12 +10,50 @@
     {% tailwind_css %}
 
     <!-- HTML Meta Tags -->
-    <title>Stryker Digital</title>
+    <title>Stryker Digital - Digital Marketing Services</title>
+    <meta
+      name="description"
+      content="A cutting-edge digital marketing agency with proven results."
+    />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="http://www.stryker-digital.com/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Stryker Digital - Digital Marketing Services"
+    />
+    <meta
+      property="og:description"
+      content="A cutting-edge digital marketing agency with proven results."
+    />
+    <meta
+      property="og:image"
+      content="https://i.ibb.co/qpt40pY/Stryker-digital.png"
+    />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="stryker-digital.com" />
+    <meta property="twitter:url" content="http://www.stryker-digital.com/" />
+    <meta
+      name="twitter:title"
+      content="Stryker Digital - Digital Marketing Services"
+    />
+    <meta
+      name="twitter:description"
+      content="A cutting-edge digital marketing agency with proven results."
+    />
+    <meta
+      name="twitter:image"
+      content="https://i.ibb.co/qpt40pY/Stryker-digital.png"
+    />
+
+    <!-- Meta Tags Generated via https://www.opengraph.xyz -->
   </head>
 
   <body>
-    {% block content %}
-    {% endblock %}
+    {% block content %} {% endblock %}
   </body>
   <script src="https://js.stripe.com/v3/"></script>
   <script src="{% static 'main.js' %}"></script>

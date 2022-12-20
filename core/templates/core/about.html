@@ -1,29 +1,19 @@
 {% extends 'base/base.html' %} {% block content %} {% load crispy_forms_tags %}
 {% load static %} {% include 'include/navbar.html' %}
-
-<!--
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
--->
 <div class="bg-white">
   <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:px-8 lg:py-24">
     <div class="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
       <div class="space-y-5 sm:space-y-4">
-        <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Our Team</h2>
+        <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Meet the team</h2>
         <p class="text-xl text-gray-500">
-          Nulla quam felis, enim faucibus proin velit, ornare id pretium. Augue
-          ultrices sed arcu condimentum vestibulum suspendisse. Volutpat eu
-          faucibus vivamus eget bibendum cras.
+          Our team is made up of two digital marketing professionals with a
+          passion for helping businesses succeed online. Our focus is on delivering
+          high-quality, results-driven digital marketing services that help
+          businesses reach their goals.
+          <br><br>
+          We specialize in a range of services
+          including search engine optimization (SEO), social media marketing,
+          website desgin, and content marketing.
         </p>
       </div>
       <div class="lg:col-span-2">
@@ -48,9 +38,16 @@
               </div>
               <div class="text-lg">
                 <p class="text-gray-500">
-                  Andy brings a strong skillset as a professional web developer
-                  with extensive experience creating SEO optimized websites for
-                  small businesses.
+                  Andy brings a vital skill set as a web developer with
+                  extensive experience creating SEO-optimized websites for
+                  businesses.
+                  <br /><br />
+                  Before founding Stryker Digital, Andy was the Director of
+                  Research at Augury Research, where he distributed equity
+                  research to private and institutional investors. After
+                  completing his time at Augury, he spent the next year as a
+                  freelancer building websites for small and medium-sized
+                  businesses.
                 </p>
               </div>
 
@@ -91,14 +88,12 @@
             </div>
           </li>
 
-          <!-- More people... -->
-
           <li>
             <div class="space-y-4">
-              <div class="aspect-w-3 aspect-h-2">
+              <div class="aspect-w-3 aspect-h-3">
                 <img
                   class="rounded-lg object-cover shadow-lg"
-                  src="https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                  src="{% static 'images/bodhi.jpeg'%}"
                   alt=""
                 />
               </div>
@@ -108,13 +103,19 @@
               </div>
               <div class="text-lg">
                 <p class="text-gray-500">
-                  After acquiring TNT Junk Boys, Bodhi doubled revenues through
-                  digital marketing channels.
+                  Bodhi graduated from St. Thomas Aquinas in 2021 with a
+                  Bachelor's degree in Marketing and Social Media Marketing.
+                  <br /><br />
+                  After graduation, Bodhi acquired TNT Junk Boys, and
+                  significantly increase the company's revenue through digital
+                  marketing channels. Before buying TNT, Bodhi gained valuable
+                  experiences through internships at Active International and
+                  Benjamin Moore & Co. as a Marketing and Sales intern.
                 </p>
               </div>
 
               <ul role="list" class="flex space-x-5">
-                <li>
+                <!-- <li>
                   <a href="#" class="text-gray-400 hover:text-gray-500">
                     <span class="sr-only">Twitter</span>
                     <svg
@@ -145,7 +146,7 @@
                       />
                     </svg>
                   </a>
-                </li>
+                </li> -->
               </ul>
             </div>
           </li>
@@ -154,5 +155,7 @@
     </div>
   </div>
 </div>
+
+{% include 'include/footer.html' %}
 
 {% endblock %}

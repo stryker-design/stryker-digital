@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from core.forms import ContactForm
 
 # Create your views here.
@@ -6,6 +6,13 @@ from core.forms import ContactForm
 def index(request):
     form = ContactForm
     context = {'form': form}
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+        else:
+            form = ContactForm()
     return render(request, 'core/index.html', context)
 
 def about(request):

@@ -10,6 +10,7 @@
       </div>
       <div class="flex lg:hidden">
         <button
+          id="hamburger"
           type="button"
           class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
         >
@@ -101,7 +102,9 @@
           >Blog</a
         >
 
-        <a href="#" class="font-semibold text-gray-900 hover:text-gray-900"
+        <a
+          href="{% url 'contact' %}"
+          class="font-semibold text-gray-900 hover:text-gray-900"
           >Contact</a
         >
 
@@ -113,32 +116,33 @@
       </div>
       <div class="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
         <a
-          href="#contact"
+          href="{% url 'contact' %}"
           class="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-white bg-black shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20"
-          >Log in</a
+          >Get started</a
         >
       </div>
     </nav>
 
     <!-- Mobile menu, show/hide based on menu open state. -->
-    <div role="dialog" aria-modal="true" class="hidden">
+    <div id="mobile-nav" role="dialog" aria-modal="true" class="hidden">
       <div
         focus="true"
         class="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden"
       >
         <div class="flex h-9 items-center justify-between">
           <div class="flex">
-            <a href="#" class="-m-1.5 p-1.5">
+            <!-- <a href="#" class="-m-1.5 p-1.5">
               <span class="sr-only">Your Company</span>
               <img
                 class="h-8"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                src=""
                 alt=""
               />
-            </a>
+            </a> -->
           </div>
           <div class="flex">
             <button
+              id="close-menu"
               type="button"
               class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
             >
@@ -166,37 +170,48 @@
           <div class="-my-6 divide-y divide-gray-500/10">
             <div class="space-y-2 py-6">
               <a
+                href="{% url 'home' %}"
+                class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10 hover:cursor-pointer"
+                >Home</a
+              >
+
+              <a
+                id="nav-button"
                 href="#services"
                 class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10 hover:cursor-pointer"
                 >Services</a
               >
 
               <a
-                href="#"
+                href="{% url 'about' %}"
                 class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
-                >Features</a
+                >About</a
               >
 
               <a
-                href="#"
+                href="{% url 'blog-list' %}"
                 class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
               >
-                Marketplace</a
+                Blog</a
               >
 
-              <a
+              <!-- <a
                 href="#"
                 class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
                 >Company</a
-              >
+              > -->
             </div>
-            <div class="py-6">
+            <!-- <div class="py-6">
               <a
                 href="#"
                 class="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10"
                 >Log in</a
               >
-            </div>
+            </div> -->
+
+            <a href="{% url 'home' %}">
+              <img src="{% static 'images/nav-logo.png' %}" />
+            </a>
           </div>
         </div>
       </div>
@@ -210,5 +225,23 @@
   dropdownBtn.addEventListener("click", function (e) {
     e.preventDefault();
     dropdown.classList.toggle("hidden");
+  });
+
+  const hamburger = document.getElementById("hamburger");
+  const mobileNav = document.getElementById("mobile-nav");
+  const closeMenu = document.getElementById("close-menu");
+
+  hamburger.addEventListener("click", function () {
+    mobileNav.classList.remove("hidden");
+  });
+
+  closeMenu.addEventListener("click", function () {
+    mobileNav.classList.add("hidden");
+  });
+
+  const navButton = document.getElementById("nav-button");
+  navButton.addEventListener("click", function () {
+    console.log("hello");
+    mobileNav.classList.add("hidden");
   });
 </script>

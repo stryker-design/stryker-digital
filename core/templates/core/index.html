@@ -11,7 +11,6 @@
         <div>
           <div></div>
           <div class="mt-20">
-            <div></div>
             <div class="mt-6 md:mt-0">
               <h1
                 class="text-4xl font-bold tracking-tight text-center md:text-left text-gray-900 sm:text-5xl"
@@ -44,9 +43,9 @@
                 </a>
               </div>
             </div>
-            <div class="mt-6">
-              <div class="inline-flex items-center divide-x divide-gray-300">
-                <div class="flex flex-shrink-0 pr-5">
+            <div class="mt-6 flex justify-center md:justify-start">
+              <div class="inline-flex items-center divide-gray-300">
+                <div class="flex flex-shrink-0 pr-2">
                   <!-- Heroicon name: mini/star -->
                   <svg
                     class="h-5 w-5 text-yellow-400"
@@ -119,11 +118,9 @@
                   </svg>
                 </div>
                 <div
-                  class="min-w-0 flex-1 py-1 pl-5 text-sm text-gray-500 sm:py-3"
+                  class="min-w-0 py-1 text-sm text-gray-500 sm:py-3"
                 >
-                  <span class="font-medium text-gray-900"
-                    >Trusted by 500+ small businesses</span
-                  >
+                  <span class="font-medium text-gray-900">Client reviews</span>
                   <!-- by
                 over
                 <span class="font-medium text-indigo-600">500 beta users</span> -->
@@ -260,7 +257,7 @@
                 class="flex h-12 w-12 items-center justify-center rounded-xl bg-black text-white sm:shrink-0"
               >
                 <!-- Heroicon name: outline/scale -->
-                
+
                 <svg
                   class="h-8 w-8"
                   xmlns="http://www.w3.org/2000/svg"
@@ -285,7 +282,6 @@
                   Your competitors will get seen, but you'll be unmissable with
                   effective SEO services. Don’t just rank. Be top of search, top
                   of mind, and on top of the competition.
-              
                 </p>
                 <p class="mt-2 text-black">Learn more &rarr;</p>
               </div>
@@ -321,7 +317,8 @@
                 </p>
                 <p class="mt-2 text-base leading-7 text-gray-600">
                   We’ll put you wherever your audience hangs out the most and
-                  craft content that builds authentic relationships with them. Click to get started. 
+                  craft content that builds authentic relationships with them.
+                  Click to get started.
                 </p>
                 <p class="mt-2 text-black">Learn more &rarr;</p>
               </div>
@@ -465,7 +462,7 @@
 
   <!-- CONTACT SECTION -->
   <section id="contact">
-    <div class="relative bg-white">
+    <div class="relative bg-black">
       <div class="absolute inset-0">
         <div class="absolute inset-y-0 left-0 w-1/2 bg-black"></div>
       </div>
@@ -529,45 +526,46 @@
                 </dd>
               </div>
             </dl>
-            <p class="mt-6 text-base text-white">
+            <!-- <p class="mt-6 text-base text-white">
               Have more questions?
               <a
                 href="#faq"
                 class="font-medium text-white underline scroll-smooth"
                 >View frequently asked questions</a
               >.
-            </p>
+            </p> -->
           </div>
         </div>
         <div
-          class="bg-white py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12"
+          class="bg-black py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12"
         >
-          <div class="mx-auto max-w-lg lg:max-w-none">
+          <div class="mx-auto max-w-lg lg:max-w-none bg-black">
             <form action="#" method="POST" class="grid grid-cols-1 gap-y-6">
+              {% csrf_token %}
               <div class="flex flex-col gap-2">
-                <label for="full-name" class="">Full name</label>
-                <div>{{ form.first_name|as_crispy_field }}</div>
+                <label for="full-name" class="text-white">Full name</label>
+                <div class="">{{ form.name|as_crispy_field }}</div>
               </div>
               <div class="flex flex-col gap-2">
-                <label for="full-name" class="">Email</label>
-                <div>{{ form.phone|as_crispy_field }}</div>
-              </div>
-              <div class="flex flex-col gap-2">
-                <label for="full-name" class="">Phone</label>
+                <label for="full-name" class="text-white">Email</label>
                 <div>{{ form.email|as_crispy_field }}</div>
               </div>
               <div class="flex flex-col gap-2">
-                <label for="full-name" class="">Business</label>
+                <label for="full-name" class="text-white">Phone</label>
+                <div>{{ form.phone|as_crispy_field }}</div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="full-name" class="text-white">Business</label>
                 <div>{{ form.business|as_crispy_field }}</div>
               </div>
               <div class="flex flex-col gap-2">
-                <label for="full-name" class="">Message</label>
+                <label for="full-name" class="text-white">Message</label>
                 <div>{{ form.message|as_crispy_field }}</div>
               </div>
               <div>
                 <button
                   type="submit"
-                  class="inline-flex justify-center rounded-md border border-transparent bg-black py-3 px-6 text-base font-medium text-white shadow-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                  class="inline-flex justify-center rounded-md border border-white bg-black py-3 px-6 text-base font-medium text-white shadow-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                 >
                   Submit
                 </button>
@@ -634,7 +632,7 @@
   </section> -->
   <!-- END FAQ -->
 
-  {% include 'include/footer.html' %}
+  {% include 'include/home-footer.html' %}
 </html>
 
 {% endblock %}
