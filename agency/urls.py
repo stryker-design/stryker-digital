@@ -7,6 +7,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls')),
     path('', include('blog.urls')),
+    path('', include('audit.urls')),
 
     # TAILWIND
 

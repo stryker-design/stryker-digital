@@ -1,0 +1,30 @@
+{% extends 'base/base.html' %} {% block content %} {% load crispy_forms_tags %}
+{% load static %} {% include 'include/navbar.html' %}
+
+<div class="mx-auto max-w-7xl py-16 px-4 sm:py-24 sm:px-6 lg:px-8x">
+  <ul
+    role="list"
+    class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+  >
+    {% for audit in audit_list %}
+    <a href="{% url 'audit-detail' audit.slug %}">
+      <li
+        class="col-span-1 flex flex-col divide-gray-200 rounded-lg bg-white text-center shadow-xl border border-black"
+      >
+        <div class="flex justify-center pb-2">
+          <h3 class="mt-6 text-lg font-medium text-gray-900">
+            {{ audit.business_name }}
+          </h3>
+          
+         
+        </div>
+        <p class="text-gray-800 pb-10">SEO Audit</p>
+      </li>
+    </a>
+    {% endfor %}
+
+    <!-- More people... -->
+  </ul>
+</div>
+
+{% endblock %}

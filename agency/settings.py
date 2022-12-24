@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     # APPS
     'core',
     'blog',
+    'audit',
 
     # TAILWIND
     'tailwind',
