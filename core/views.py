@@ -45,3 +45,8 @@ def website(request):
     context = {'form': form}
     return render(request, 'services/website.html', context)
 
+def pitch_deck(request):
+    context = {}
+    return render(request, 'services/pitch-deck.html', context)
+
+

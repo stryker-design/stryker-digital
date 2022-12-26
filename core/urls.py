@@ -10,4 +10,5 @@ urlpatterns = [
     path('social/', views.social, name='social'),
     path('crm/', views.crm, name='crm'),
     path('seo/', views.seo, name='seo'),
+    path('deck/', views.pitch_deck, name='pitch-deck'),
 ]
