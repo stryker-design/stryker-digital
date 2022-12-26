@@ -49,4 +49,8 @@ def pitch_deck(request):
     context = {}
     return render(request, 'services/pitch-deck.html', context)
 
+def pitch_deck2(request):
+    context = {}
+    return render(request, 'services/pitch-deck2.html', context)
+
 
