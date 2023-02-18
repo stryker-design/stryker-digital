@@ -12,4 +12,5 @@ urlpatterns = [
     path('seo/', views.seo, name='seo'),
     path('deck/', views.pitch_deck, name='pitch-deck'),
     path('deck2/', views.pitch_deck2, name='pitch-deck2'),
+    path('backlinks/', views.backlinks, name='backlinks'),
 ]

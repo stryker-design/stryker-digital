@@ -34,6 +34,10 @@ def crm(request):
     form = ContactForm
     context = {'form': form}
     return render(request, 'services/crm.html', context)
+def backlinks(request):
+    form = ContactForm
+    context = {'form': form}
+    return render(request, 'core/backlinks.html', context)
 
 def social(request):
     form = ContactForm
